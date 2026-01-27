@@ -21,6 +21,7 @@ class x_square(Function):
         :param grad_output:
         :return:
         """
+        print(grad_output)
         i, = ctx.saved_tensors
         grad_i = 2 * i
         grad_results = grad_i * grad_output
@@ -28,7 +29,7 @@ class x_square(Function):
 
 x = torch.tensor([3.],requires_grad=True)
 a = x_square.apply(x)
-print(a.item())
+print(a)
 
 a.backward()
-print(x.grad.item())
+print(x.grad)
