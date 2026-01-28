@@ -10,7 +10,7 @@ class x_square(Function):
         :return:
         """
         result = i**2
-        ctx.save_for_backward(i)
+        ctx.save_for_backward(i) # save_for_backward()  存储张量
 
         return result
 
@@ -21,7 +21,8 @@ class x_square(Function):
         :param grad_output:
         :return:
         """
-        print(grad_output)
+        print("grad_output的值为：",grad_output)
+        print("查看ctx.saved_tensors的值：",ctx.saved_tensors)
         i, = ctx.saved_tensors
         grad_i = 2 * i
         grad_results = grad_i * grad_output
@@ -29,7 +30,8 @@ class x_square(Function):
 
 x = torch.tensor([3.],requires_grad=True)
 a = x_square.apply(x)
-print(a)
+print("前向传播结果是：",a)
 
+a = a*10
 a.backward()
-print(x.grad)
+print("对x的梯度为：",x.grad)
