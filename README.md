@@ -1,9 +1,10 @@
-# README
+# PyTorch Practice & Learning Notes
 
-This project is mainly used for collecting some practices in learning Python, more specifically, **Pytorch**.
+This repository contains a collection of Python practice codes and notes, with a specific focus on **PyTorch**.
 
-And this project mainly refers to [https://tingsongyu.github.io/PyTorch-Tutorial-2nd/]
+The content follows the curriculum and examples from [PyTorch Tutorial 2nd](https://tingsongyu.github.io/PyTorch-Tutorial-2nd/).
 
-Hoping I'll make big progresses in holiday.
+> "An open source machine learning framework that accelerates the path from research prototyping to production deployment." — *PyTorch*
 
-"An open source machine learning framework that accelerates the path from research prototyping to production deployment."
+## 🚀 Goals
+I established this project to track my learning journey and aim to make significant progress during the holiday.
